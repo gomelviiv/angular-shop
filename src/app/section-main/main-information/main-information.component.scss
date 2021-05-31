@@ -1,0 +1,58 @@
+@import "const/_mixins.scss";
+@import "const/_variables.scss";
+
+.main-information {
+  width: 100%;
+  background-image: url(../../../assets/images/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-bottom: 30px;
+
+  &__slogan {
+    @include typeText($main-color, $main-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 600px;
+    padding-bottom: 95px;
+  }
+
+  .main-button {
+    @include mainStyleButton($main-color, $main-border, none);
+    @include typeText($main-color, $main-font);
+    margin-top: 50px;
+    text-transform: uppercase;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__hr {
+    border: 1px solid $main-color;
+    margin-top: 95px;
+  }
+
+  .brends {
+    @include typeFlex;
+    margin-top: 30px;
+
+    &__item {
+      border-right: 0.5px solid $main-color;
+      padding: 0 15px;
+
+      & img {
+        width: 100%;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

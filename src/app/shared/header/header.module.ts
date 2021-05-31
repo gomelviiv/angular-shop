@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderRoutingModule } from './header-routing.module';
 import { HeaderComponent } from './header.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../shared.module';
 
 
 
@@ -15,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     HeaderRoutingModule,
     SharedModule
-  ]
+  ],
+  exports: [HeaderComponent]
 })
 export class HeaderModule { }
