@@ -1,5 +1,25 @@
-.figure-style {
-  margin: 15px 0;
+@import "const/_variables.scss";
+
+.figure {
+  margin: 7px;
   cursor: pointer;
   position: relative;
+}
+
+figcaption {
+  position: absolute;
+  top: 222px;
+  width: 100%;
+  margin-left: -50%;
+  left: 50%;
+  bottom: 30px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 3;
 }

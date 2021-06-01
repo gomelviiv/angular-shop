@@ -1,0 +1,30 @@
+@import "const/_mixins.scss";
+@import "const/_variables.scss";
+
+.our-articles {
+  @include typeText($secondary-color, $main-font);
+  padding: 135px 0;
+  text-align: center;
+
+  .wrapper {
+    @include wrapper;
+
+    .blog-articles {
+      margin-top: 60px;
+      @include typeFlex(row, center, space-between);
+      flex-wrap: wrap;
+
+      app-figure {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .main-button {
+      margin-top: 60px;
+      text-transform: uppercase;
+      @include mainStyleButton($main-color, $main-border, #333333);
+    }
+  }
+}

@@ -1,18 +1,17 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import { IItemMainPageCatalog } from '@app/core/models/itemsMainPageCatalog'
-
+import { IItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
 
 @Component({
   selector: 'app-figure',
   templateUrl: './figure.component.html',
-  styleUrls: ['./figure.component.scss']
+  styleUrls: ['./figure.component.scss'],
 })
-export class FigureComponent implements OnInit { 
-  @Input() items:Array<IItemMainPageCatalog> | undefined;
-  constructor() { }
+export class FigureComponent implements OnInit {
+  @Input() items: Array<IItemsMainPage> | undefined;
+  @Input() itemsTile: Array<IItemsMainPage> | undefined;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

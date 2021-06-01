@@ -2,19 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from './material.module';
-import { HeaderModule } from './header/header.module';
 import { FigureModule } from './figure/figure.module';
-
-
+import { SectionTextModule } from './section-text/section-text.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    MaterialModule,
-    FigureModule,
-  ]
+  imports: [CommonModule],
+  exports: [MaterialModule, SectionTextModule, FigureModule],
 })
-export class SharedModule { }
+export class SharedModule {}

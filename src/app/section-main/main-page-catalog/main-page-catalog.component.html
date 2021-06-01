@@ -1,22 +1,21 @@
-<section className="main-page-catalog">
-    <div className="wrapper">
-        <!-- <SectionText paragraph={'К мероприятиям'} heading={'Настоящая красота здесь!'} /> -->
-      <ul className="main-menu">
-        <!-- {menuButton &&
-          menuButton.map((value, index) => (
-            <li className="main-menu__item" key={index}>
-              <a to="catalog">
-                <button
-                  className="main-menu__item-button "
-                  >
-                  {value.text}
-                </button>
-              </a>
-            </li>
-          ))} -->
-      </ul>
-      <div className="tile">
-          <app-figure [items]="itemsMenu"></app-figure>
-      </div>
+<section class="main-page-catalog">
+  <div class="wrapper">
+    <app-section-text
+      [heading]="heading"
+      [paragraph]="paragraph"
+    ></app-section-text>
+    <ul class="main-menu">
+      <li
+        class="main-menu__item"
+        *ngFor="let button of itemsMenuButtons; let i = index"
+      >
+        <a href="catalog">
+          <button class="main-menu__item-button">{{ button.text }}</button>
+        </a>
+      </li>
+    </ul>
+    <div class="tile">
+      <app-figure [items]="itemsMenuTiles"></app-figure>
     </div>
-  </section>
+  </div>
+</section>

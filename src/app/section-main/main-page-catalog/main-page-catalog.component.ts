@@ -1,73 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { IItemMainPageCatalog } from '@app/core/models/itemsMainPageCatalog'
+import {
+  IButtonsMainPageCatalog,
+  IItemsMainPage,
+} from '@app/core/models/itemsMainPageCatalogModels';
 
-const menuTile = [
-  {
-    img: '../../../../assets/images/ring.png',
-    description: 'Кольца',
-  },
-  {
-    img: '../../../../assets/images/sergi.png',
-    description: 'серьги',
-  },
-  {
-    img: '../../../../assets/images/podveski.png',
-    description: 'подвески',
-  },
-  {
-    img: '../../../../assets/images/ring.png',
-    description: 'запонки',
-  },
-  {
-    img: '../../../../assets/images/braslet.png',
-    description: 'браслеты',
-  },
-  {
-    img: '../../../../assets/images/clocks.png',
-    description: 'часы',
-  },
-];
-
-const menuButton = [
-  {
-    text: 'свадьба',
-    // event: () => SetEvent(1),
-  },
-  {
-    text: 'мужу',
-    // event: () => SetGender(1),
-  },
-  {
-    text: 'жене',
-    // event: () => SetGender(0),
-  },
-  {
-    text: 'партнеру',
-    // event: () => SetGender(2),
-  },
-  {
-    text: 'кольцо',
-    // event: () => SetType(0),
-  },
-  {
-    text: 'лето',
-    // event: () => SetSeason(1),
-  },
-];
-
+import { menuTile, menuButton } from './constant';
 
 @Component({
   selector: 'app-main-page-catalog',
   templateUrl: './main-page-catalog.component.html',
-  styleUrls: ['./main-page-catalog.component.scss']
+  styleUrls: ['./main-page-catalog.component.scss'],
 })
 export class MainPageCatalogComponent implements OnInit {
+  itemsMenuTiles: Array<IItemsMainPage> = menuTile;
+  itemsMenuButtons: Array<IButtonsMainPageCatalog> = menuButton;
 
-  itemsMenu:Array<IItemMainPageCatalog> = menuTile
+  heading = 'Настоящая красота здесь!';
+  paragraph = 'К мероприятиям';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

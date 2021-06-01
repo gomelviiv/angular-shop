@@ -13,4 +13,8 @@
   @include typeText($main-color, $main-font);
   background: #333333;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 200px;
 }

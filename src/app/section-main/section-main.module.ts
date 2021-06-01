@@ -6,19 +6,22 @@ import { SectionMainComponent } from './section-main.component';
 import { MainInformationModule } from './main-information/main-information.module';
 import { MainPageCatalogModule } from './main-page-catalog/main-page-catalog.module';
 import { SharedModule } from '@app/shared/shared.module';
-
+import { OurSalonsModule } from './our-salons/our-salons.module';
+import { OurArticlesModule } from './our-articles/our-articles.module';
+import { OurSocialNetworksModule } from './our-social-networks/our-social-networks.module';
 
 @NgModule({
-  declarations: [
-    SectionMainComponent,
-  ],
+  declarations: [SectionMainComponent],
   imports: [
     CommonModule,
     SharedModule,
     SectionMainRoutingModule,
     MainInformationModule,
     MainPageCatalogModule,
+    OurSalonsModule,
+    OurArticlesModule,
+    OurSocialNetworksModule,
   ],
-  exports: [SectionMainComponent]
+  exports: [SectionMainComponent],
 })
-export class SectionMainModule { }
+export class SectionMainModule {}

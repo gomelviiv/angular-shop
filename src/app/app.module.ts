@@ -10,9 +10,7 @@ import { SectionMainModule } from './section-main/section-main.module';
 import { HeaderModule } from './shared/header/header.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,9 +18,9 @@ import { HeaderModule } from './shared/header/header.module';
     SharedModule,
     MainInformationModule,
     SectionMainModule,
-    HeaderModule
+    HeaderModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

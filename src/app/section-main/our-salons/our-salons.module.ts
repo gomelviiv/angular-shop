@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainPageCatalogComponent } from './main-page-catalog.component';
+import { OurSalonsComponent } from './our-salons.component';
 import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
-  declarations: [MainPageCatalogComponent],
+  declarations: [OurSalonsComponent],
   imports: [CommonModule, SharedModule],
-  exports: [MainPageCatalogComponent],
+  exports: [OurSalonsComponent],
 })
-export class MainPageCatalogModule {}
+export class OurSalonsModule {}
