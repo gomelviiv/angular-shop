@@ -1,4 +1,4 @@
-interface Items {
+export interface CategoryItems {
   value: number;
   name: string;
 }
@@ -6,6 +6,6 @@ interface Items {
 export interface CategoryModel {
   id: number;
   name: string;
-  menuItems: Array<Items>;
+  menuItems: Array<CategoryItems>;
   type: string;
 }

@@ -56,11 +56,13 @@ export const sortItems = {
   name: 'Сортировка',
   sortBy: [
     {
+      id: 11,
       sortByType: 'price',
       order: 'desc',
       name: 'цене',
     },
     {
+      id: 22,
       sortByType: 'name',
       order: 'asc',
       name: 'алфавиту',

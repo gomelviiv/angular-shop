@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CategoryModel } from '../../core/models/categoryModels';
+
+import { CategoryItems, CategoryModel } from '../../core/models/categoryModels';
 
 @Component({
   selector: 'app-form-select-category',
@@ -11,8 +12,7 @@ export class FormSelectCategoryComponent implements OnInit {
 
   constructor() {}
 
-  identity(item: any): number {
-    console.log(item);
+  identity(index: number, item: CategoryItems): string {
     return item.name;
   }
 
