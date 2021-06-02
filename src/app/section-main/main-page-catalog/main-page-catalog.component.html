@@ -7,7 +7,7 @@
     <ul class="main-menu">
       <li
         class="main-menu__item"
-        *ngFor="let button of itemsMenuButtons; let i = index"
+        *ngFor="let button of itemsMenuButtons; trackBy: identity"
       >
         <a href="catalog">
           <button class="main-menu__item-button">{{ button.text }}</button>

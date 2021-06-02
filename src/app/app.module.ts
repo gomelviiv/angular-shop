@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
-import { MainInformationModule } from './section-main/main-information/main-information.module';
-import { SectionMainModule } from './section-main/section-main.module';
 import { HeaderModule } from './shared/header/header.module';
 
 @NgModule({
@@ -16,8 +14,6 @@ import { HeaderModule } from './shared/header/header.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    MainInformationModule,
-    SectionMainModule,
     HeaderModule,
   ],
   providers: [],

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { IItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
+import { ItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
 
 @Component({
   selector: 'app-figure',
@@ -8,8 +8,8 @@ import { IItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
   styleUrls: ['./figure.component.scss'],
 })
 export class FigureComponent implements OnInit {
-  @Input() items: Array<IItemsMainPage> | undefined;
-  @Input() itemsTile: Array<IItemsMainPage> | undefined;
+  @Input() items: Array<ItemsMainPage> | undefined;
+  @Input() itemsTile: Array<ItemsMainPage> | undefined;
 
   constructor() {}
 

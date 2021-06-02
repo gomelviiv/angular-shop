@@ -1,9 +1,9 @@
-@import "const/_mixins.scss";
-@import "const/_variables.scss";
+@import "const/mixins.scss";
+@import "const/variables.scss";
 
 .main-information {
   width: 100%;
-  background-image: url(./assets/images/bg.png);
+  background-image: url(/assets/images/bg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
