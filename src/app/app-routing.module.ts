@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'catalog',
+    path: '',
     loadChildren: () =>
-      import('./section-catalog/section-catalog.module').then(
-        (m) => m.SectionCatalogModule
+      import('./section-main/section-main.module').then(
+        (m) => m.SectionMainModule
       ),
   },
 ];

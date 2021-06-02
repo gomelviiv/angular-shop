@@ -1,0 +1,21 @@
+<section class="main-page-catalog">
+  <div class="wrapper">
+    <app-section-text
+      [heading]="heading"
+      [paragraph]="paragraph"
+    ></app-section-text>
+    <ul class="main-menu">
+      <li
+        class="main-menu__item"
+        *ngFor="let button of itemsMenuButtons; trackBy: identity"
+      >
+        <a href="catalog">
+          <button class="main-menu__item-button">{{ button.text }}</button>
+        </a>
+      </li>
+    </ul>
+    <div class="tile">
+      <app-figure [items]="itemsMenuTiles"></app-figure>
+    </div>
+  </div>
+</section>

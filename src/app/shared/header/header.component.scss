@@ -1,3 +1,7 @@
+
+@import "const/mixins";
+@import "const/variables";
+
 .header-nav {
   width: 100%;
   height: auto;
@@ -5,7 +9,18 @@
   font-size: 14px;
   line-height: 21px;
 }
+
 .mat-toolbar {
+  @include typeText($main-color, $main-font);
+  background: #333333;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 200px;
+}
+
+mat-toolbar {
   background: #333333;
   color: white;
 }

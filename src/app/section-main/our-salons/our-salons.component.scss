@@ -1,0 +1,37 @@
+@import "const/mixins.scss";
+@import "const/variables.scss";
+
+.our-salons {
+  padding: 105px 0;
+  @include typeText($main-color, $main-font);
+  width: 100%;
+  background-image: url(/assets/images/bg-black.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  .wrapper {
+    @include wrapper;
+
+    .our-salons__p {
+      margin: 60px 0;
+      font-family: Gilroy;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    .main-button {
+      text-transform: uppercase;
+      @include mainStyleButton(
+        $secondary-color,
+        1px solid $secondary-color,
+        $main-color
+      );
+    }
+  }
+}
