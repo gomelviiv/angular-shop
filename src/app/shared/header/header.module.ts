@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderRoutingModule } from './header-routing.module';
 import { HeaderComponent } from './header.component';
-import { SharedModule } from '../shared/shared.module';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [CommonModule, HeaderRoutingModule, SharedModule],
+  imports: [CommonModule, HeaderRoutingModule, MaterialModule],
   exports: [HeaderComponent],
 })
 export class HeaderModule {}

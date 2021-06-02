@@ -1,11 +1,8 @@
 <section class="select-category">
-  <div *ngFor="let item of itemsCategory; trackBy: identity">
+  <div *ngFor="let item of itemsCategory; trackBy: trackByIden">
     <app-form-select-category [item]="item"></app-form-select-category>
   </div>
   <div>
     <app-form-select-sortby [sortItems]="itemsSortBy"></app-form-select-sortby>
   </div>
-  <!--{sortItems && (
-      <FormSelectSortBy sortItems={sortItems} selectDispatchSortBy={selectDispatchSortBy} />
-    )} -->
 </section>

@@ -7,5 +7,5 @@ export interface SortByItems {
 
 export interface SortByModel {
   name: string;
-  sortBy: Array<SortByItems>;
+  sortBy: SortByItems[];
 }

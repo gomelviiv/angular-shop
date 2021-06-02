@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { SortByItems, SortByModel } from '../../core/models/sortByModels';
+import { trackByIden } from '../../core/utils';
+import { SortByModel } from '../../core/models/sortByModels';
 
 @Component({
   selector: 'app-form-select-sortby',
@@ -9,12 +10,9 @@ import { SortByItems, SortByModel } from '../../core/models/sortByModels';
 })
 export class FormSelectSortbyComponent implements OnInit {
   @Input() sortItems!: SortByModel;
+  trackByIden = trackByIden;
 
   constructor() {}
-
-  identity(index: number, item: SortByItems): number {
-    return item.id;
-  }
 
   ngOnInit(): void {}
 }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { CategoryItems, CategoryModel } from '../../core/models/categoryModels';
+import { trackByIden } from '../../core/utils';
+import { CategoryModel } from '../../core/models/categoryModels';
 
 @Component({
   selector: 'app-form-select-category',
@@ -9,12 +10,9 @@ import { CategoryItems, CategoryModel } from '../../core/models/categoryModels';
 })
 export class FormSelectCategoryComponent implements OnInit {
   @Input() item!: CategoryModel;
+  trackByIden = trackByIden;
 
   constructor() {}
-
-  identity(index: number, item: CategoryItems): string {
-    return item.name;
-  }
 
   ngOnInit(): void {}
 }

@@ -1,7 +1,7 @@
 <mat-form-field appearance="fill">
   <mat-label>{{ sortItems.name }}</mat-label>
   <mat-select>
-    <mat-option *ngFor="let i of sortItems.sortBy; trackBy: identity">{{
+    <mat-option *ngFor="let i of sortItems.sortBy; trackBy: trackByIden">{{
       i.name
     }}</mat-option>
   </mat-select>
