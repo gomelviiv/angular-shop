@@ -6,6 +6,6 @@ export interface CategoryItems {
 export interface CategoryModel {
   id: number;
   name: string;
-  menuItems: CategoryItems[];
-  type: string;
+  items: CategoryItems[];
+  type?: string;
 }

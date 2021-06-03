@@ -2,7 +2,7 @@
   <div *ngFor="let item of itemsCategory; trackBy: trackByIden">
     <app-form-select-category [item]="item"></app-form-select-category>
   </div>
-  <div>
-    <app-form-select-sortby [sortItems]="itemsSortBy"></app-form-select-sortby>
+  <div *ngFor="let item of itemsSortBy; trackBy: trackByIden">
+    <app-form-select-category [item]="item"></app-form-select-category>
   </div>
 </section>

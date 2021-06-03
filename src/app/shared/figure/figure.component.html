@@ -1,4 +1,4 @@
-<figure class="figure" *ngFor="let item of items; let i = index">
+<figure class="figure" *ngFor="let item of items; trackBy: trackByIden">
   <img src="{{ item.img }}" alt="" />
   <figcaption>{{ item.description }}</figcaption>
 </figure>

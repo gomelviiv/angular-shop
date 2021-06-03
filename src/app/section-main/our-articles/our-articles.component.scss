@@ -1,5 +1,5 @@
-@import "const/mixins.scss";
-@import "const/variables.scss";
+@import "const/mixins";
+@import "const/variables";
 
 .our-articles {
   @include typeText($secondary-color, $main-font);
