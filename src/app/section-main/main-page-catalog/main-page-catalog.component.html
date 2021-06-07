@@ -10,8 +10,13 @@
         class="main-menu__item"
         *ngFor="let button of itemsMenuButtons; trackBy: trackById"
       >
-        <a href="catalog">
-          <button class="main-menu__item-button">{{ button.text }}</button>
+        <a routerLink="/catalog">
+          <button
+            class="main-menu__item-button"
+            (click)="changCategory(button.type, button.select)"
+          >
+            {{ button.text }}
+          </button>
         </a>
       </li>
     </ul>

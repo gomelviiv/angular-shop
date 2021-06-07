@@ -2,18 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from './material.module';
-import { FigureModule } from './figure/figure.module';
-import { FormSelectCategoryModule } from './form-select-category/form-select-category.module';
-import { HeaderModule } from './header/header.module';
+import { FormsModule } from '@angular/forms';
+import { FormSelectCategoryComponent } from './form-select-category/form-select-category.component';
+import { FigureComponent } from './figure/figure.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
+  declarations: [FormSelectCategoryComponent, FigureComponent, HeaderComponent],
+  imports: [CommonModule, MaterialModule, FormsModule],
   exports: [
+    CommonModule,
     MaterialModule,
-    FormSelectCategoryModule,
-    FigureModule,
-    HeaderModule,
+    FormsModule,
+    FormSelectCategoryComponent,
+    FigureComponent,
+    HeaderComponent,
   ],
 })
 export class SharedModule {}
