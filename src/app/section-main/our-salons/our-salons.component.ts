@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./our-salons.component.scss'],
 })
 export class OurSalonsComponent implements OnInit {
-  heading = 'Посетите наши салоны в Москве';
-  paragraph = 'Не знаете, что выбрать?';
   constructor() {}
 
   ngOnInit(): void {}

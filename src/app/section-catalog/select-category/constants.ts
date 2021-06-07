@@ -2,17 +2,17 @@ export const selectMenu = [
   {
     id: 111,
     name: 'Бренд',
-    menuItems: [
+    type: 'brand',
+    items: [
       { id: 44, value: 0, name: 'Dolce & Gabanna' },
       { id: 55, value: 1, name: 'Gabanna & Dolce' },
     ],
-    type: 'brand',
     // event: (num: number) => SetBrand(num),
   },
   {
     id: 222,
     name: 'Для кого',
-    menuItems: [
+    items: [
       { id: 11, value: 0, name: 'Жены' },
       { id: 22, value: 1, name: 'Мужа' },
       { id: 33, value: 2, name: 'Парнера' },
@@ -23,7 +23,7 @@ export const selectMenu = [
   {
     id: 333,
     name: 'Сезон',
-    menuItems: [
+    items: [
       { id: 66, value: 0, name: 'Зима' },
       { id: 77, value: 1, name: 'Лето' },
     ],
@@ -33,7 +33,7 @@ export const selectMenu = [
   {
     id: 444,
     name: 'Событие',
-    menuItems: [
+    items: [
       { id: 88, value: 0, name: 'Свадьба' },
       { id: 99, value: 1, name: 'День рождения' },
     ],
@@ -43,7 +43,7 @@ export const selectMenu = [
   {
     id: 555,
     name: 'Тип',
-    menuItems: [
+    items: [
       { id: 101, value: 0, name: 'Кольцо' },
       { id: 102, value: 1, name: 'Подвеска' },
     ],
@@ -52,20 +52,22 @@ export const selectMenu = [
   },
 ];
 
-export const sortItems = {
-  name: 'Сортировка',
-  sortBy: [
-    {
-      id: 11,
-      sortByType: 'price',
-      order: 'desc',
-      name: 'цене',
-    },
-    {
-      id: 22,
-      sortByType: 'name',
-      order: 'asc',
-      name: 'алфавиту',
-    },
-  ],
-};
+export const sortItems = [
+  {
+    name: 'Сортировка',
+    items: [
+      {
+        id: 11,
+        sortByType: 'price',
+        order: 'desc',
+        name: 'цене',
+      },
+      {
+        id: 22,
+        sortByType: 'name',
+        order: 'asc',
+        name: 'алфавиту',
+      },
+    ],
+  },
+];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
+import { ItemsMainPage } from '@app/core/models';
 import { articleTile } from './constant';
 
 @Component({
@@ -9,10 +9,7 @@ import { articleTile } from './constant';
   styleUrls: ['./our-articles.component.scss'],
 })
 export class OurArticlesComponent implements OnInit {
-  heading = 'Лучшие советы по подбору дорогих подарков';
-  paragraph = 'Полезные статьи';
-
-  itemsTile: Array<ItemsMainPage> = articleTile;
+  itemsTile: ItemsMainPage[] = articleTile;
 
   constructor() {}
 

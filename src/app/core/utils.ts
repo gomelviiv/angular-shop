@@ -1,3 +1,3 @@
-export const trackByIden = (index: number, item: any) => {
+export const trackById = (index: number, item: any) => {
   return item.id;
 };

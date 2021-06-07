@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { ItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
+import { ItemsMainPage } from '@app/core/models';
+import { trackById } from '@app/core/utils';
 
 @Component({
   selector: 'app-figure',
@@ -10,6 +11,7 @@ import { ItemsMainPage } from '@app/core/models/itemsMainPageCatalogModels';
 export class FigureComponent implements OnInit {
   @Input() items: Array<ItemsMainPage> | undefined;
   @Input() itemsTile: Array<ItemsMainPage> | undefined;
+  trackById = trackById;
 
   constructor() {}
 

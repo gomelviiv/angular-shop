@@ -1,13 +1,12 @@
 <header class="header">
-    <nav class="header-nav">
-        <mat-toolbar>
-            <button mat-button >Контрагентам</button>
-            <button mat-button >Дизайнерам</button>
-            <button mat-button >Вакансии</button>
-            <button mat-button ><img src="../../assets/images/OJJO.png" al="logo"/></button>
-            <button mat-button >Вакансии</button>
-            <button mat-button >Вход/Регистрация</button>
-            <button mat-button >Вакансии</button>
-        </mat-toolbar>
-    </nav>
+  <nav class="header-nav">
+    <mat-toolbar>
+      <button
+        *ngFor="let item of menuItems; let id = index; trackBy: trackById"
+        mat-button
+      >
+        {{ item.text }}<img src="{{ item.src }}" />
+      </button>
+    </mat-toolbar>
+  </nav>
 </header>

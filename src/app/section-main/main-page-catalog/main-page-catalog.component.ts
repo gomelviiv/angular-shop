@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {
-  ButtonsMainPageCatalog,
-  ItemsMainPage,
-} from '@app/core/models/itemsMainPageCatalogModels';
+import { ButtonsMainPageCatalog, ItemsMainPage } from '@app/core/models';
+import { trackById } from '@app/core/utils';
 
 import { menuTile, menuButton } from './constant';
 
@@ -13,17 +11,11 @@ import { menuTile, menuButton } from './constant';
   styleUrls: ['./main-page-catalog.component.scss'],
 })
 export class MainPageCatalogComponent implements OnInit {
-  itemsMenuTiles: Array<ItemsMainPage> = menuTile;
-  itemsMenuButtons: Array<ButtonsMainPageCatalog> = menuButton;
-
-  heading = 'Настоящая красота здесь!';
-  paragraph = 'К мероприятиям';
+  itemsMenuTiles: ItemsMainPage[] = menuTile;
+  itemsMenuButtons: ButtonsMainPageCatalog[] = menuButton;
+  trackById = trackById;
 
   constructor() {}
-
-  identity(index: number, button: ButtonsMainPageCatalog): number {
-    return button.id;
-  }
 
   ngOnInit(): void {}
 }

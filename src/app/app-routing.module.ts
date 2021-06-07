@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.SectionMainModule
       ),
   },
+  {
+    path: 'catalog',
+    loadChildren: () =>
+      import('./section-catalog/section-catalog.module').then(
+        (m) => m.SectionCatalogModule
+      ),
+  },
 ];
 
 @NgModule({
