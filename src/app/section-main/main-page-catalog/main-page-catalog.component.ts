@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ButtonsMainPageCatalog, ItemsMainPage } from '@app/core/models';
-import { trackByIden } from '@app/core/utils';
+import { trackById } from '@app/core/utils';
 
 import { menuTile, menuButton } from './constant';
 
@@ -13,7 +13,7 @@ import { menuTile, menuButton } from './constant';
 export class MainPageCatalogComponent implements OnInit {
   itemsMenuTiles: ItemsMainPage[] = menuTile;
   itemsMenuButtons: ButtonsMainPageCatalog[] = menuButton;
-  trackByIden = trackByIden;
+  trackById = trackById;
 
   constructor() {}
 

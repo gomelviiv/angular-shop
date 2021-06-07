@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { trackByIden } from '@core/utils';
+import { trackById } from '@core/utils';
 
 @Component({
   selector: 'app-form-select-category',
@@ -9,7 +9,7 @@ import { trackByIden } from '@core/utils';
 })
 export class FormSelectCategoryComponent implements OnInit {
   @Input() item!: any;
-  trackByIden = trackByIden;
+  trackById = trackById;
 
   constructor() {}
 

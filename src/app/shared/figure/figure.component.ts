@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { ItemsMainPage } from '@app/core/models';
-import { trackByIden } from '@app/core/utils';
+import { trackById } from '@app/core/utils';
 
 @Component({
   selector: 'app-figure',
@@ -11,7 +11,7 @@ import { trackByIden } from '@app/core/utils';
 export class FigureComponent implements OnInit {
   @Input() items: Array<ItemsMainPage> | undefined;
   @Input() itemsTile: Array<ItemsMainPage> | undefined;
-  trackByIden = trackByIden;
+  trackById = trackById;
 
   constructor() {}
 

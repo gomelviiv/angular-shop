@@ -21,6 +21,10 @@
         background: $secondary-color;
         @include typeText($main-color, $main-font);
       }
+
+      button:nth-child(4) {
+        background: none;
+      }
     }
   }
 }

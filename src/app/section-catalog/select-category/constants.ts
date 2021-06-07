@@ -2,11 +2,11 @@ export const selectMenu = [
   {
     id: 111,
     name: 'Бренд',
+    type: 'brand',
     items: [
       { id: 44, value: 0, name: 'Dolce & Gabanna' },
       { id: 55, value: 1, name: 'Gabanna & Dolce' },
     ],
-    type: 'brand',
     // event: (num: number) => SetBrand(num),
   },
   {
