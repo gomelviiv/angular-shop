@@ -16,6 +16,13 @@ const routes: Routes = [
         (m) => m.SectionCatalogModule
       ),
   },
+  {
+    path: 'basket',
+    loadChildren: () =>
+      import('./section-basket/section-basket.module').then(
+        (m) => m.SectionBasketModule
+      ),
+  },
 ];
 
 @NgModule({
