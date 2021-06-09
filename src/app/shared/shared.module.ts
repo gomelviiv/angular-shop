@@ -5,15 +5,17 @@ import { MaterialModule } from './material.module';
 import { FigureModule } from './figure/figure.module';
 import { FormSelectCategoryModule } from './form-select-category/form-select-category.module';
 import { HeaderModule } from './header/header.module';
+import { FigureProductCardComponent } from './figure-product-card/figure-product-card.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [FigureProductCardComponent],
   imports: [CommonModule],
   exports: [
     MaterialModule,
     FormSelectCategoryModule,
     FigureModule,
     HeaderModule,
+    FigureProductCardComponent,
   ],
 })
 export class SharedModule {}
