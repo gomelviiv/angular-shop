@@ -1,17 +1,12 @@
 <mat-form-field appearance="fill">
   <mat-label>{{ item.name }}</mat-label>
   <mat-select [ngModel]="event$ | async">
-    <mat-option (click)="changingCategory('event', 0)" [value]="0">
-      Свадьба
-    </mat-option>
-    <mat-option (click)="changingCategory('event', 1)" [value]="1">
-      НЕ свадьба
-    </mat-option>
-    <!-- <mat-option
-      *ngFor="let item of item.items; trackBy: trackById"
-      [(ngModel)]="season$"
+    <mat-option
+      *ngFor="let selctItem of item.items; trackBy: trackById"
+      (click)="changingCategory(item.type, selctItem.value)"
+      [value]="selctItem.value"
     >
-      {{ item.name }}
-    </mat-option> -->
+      {{ selctItem.name }}
+    </mat-option>
   </mat-select>
 </mat-form-field>

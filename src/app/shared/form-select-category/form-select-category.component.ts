@@ -1,10 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { changeCategory } from '@app/root-store/select-category/actions';
 
-import {
-  eventSelector,
-  seasonSelector,
-} from '@app/root-store/select-category/selectors';
+import { selectValueSelector } from '@app/root-store/select-category/selectors';
 
 import { trackById } from '@core/utils';
 import { select, Store } from '@ngrx/store';
@@ -16,9 +13,10 @@ import { select, Store } from '@ngrx/store';
 })
 export class FormSelectCategoryComponent implements OnInit {
   @Input() item: any;
+  event$: any;
   trackById = trackById;
 
-  event$ = this.store$.pipe(select(eventSelector));
+  q1$ = this.store$.pipe(select(selectValueSelector('event')));
 
   constructor(private store$: Store) {}
 
@@ -26,5 +24,7 @@ export class FormSelectCategoryComponent implements OnInit {
     this.store$.dispatch(changeCategory({ key, payload }));
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.event$ = this.store$.pipe(select(selectValueSelector(this.item.type)));
+  }
 }

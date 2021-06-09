@@ -7,7 +7,6 @@ export const selectMenu = [
       { id: 44, value: 0, name: 'Dolce & Gabanna' },
       { id: 55, value: 1, name: 'Gabanna & Dolce' },
     ],
-    // event: (num: number) => SetBrand(num),
   },
   {
     id: 222,
@@ -18,7 +17,6 @@ export const selectMenu = [
       { id: 33, value: 2, name: 'Парнера' },
     ],
     type: 'gender',
-    // event: (num: number) => SetGender(num),
   },
   {
     id: 333,
@@ -28,7 +26,6 @@ export const selectMenu = [
       { id: 77, value: 1, name: 'Лето' },
     ],
     type: 'season',
-    // event: (num: number) => SetSeason(num),
   },
   {
     id: 444,
@@ -38,7 +35,6 @@ export const selectMenu = [
       { id: 99, value: 1, name: 'День рождения' },
     ],
     type: 'event',
-    // event: (num: number) => SetEvent(num),
   },
   {
     id: 555,
@@ -47,27 +43,27 @@ export const selectMenu = [
       { id: 101, value: 0, name: 'Кольцо' },
       { id: 102, value: 1, name: 'Подвеска' },
     ],
-    type: 'type',
-    // event: (num: number) => SetType(num),
+    type: 'types',
   },
-];
-
-export const sortItems = [
   {
+    id: 666,
     name: 'Сортировка',
     items: [
       {
         id: 11,
         sortByType: 'price',
-        order: 'desc',
+        value: 0,
+        // value: 'desc',
         name: 'цене',
       },
       {
         id: 22,
         sortByType: 'name',
-        order: 'asc',
+        value: 1,
+        // value: 'asc',
         name: 'алфавиту',
       },
     ],
+    type: 'sorting',
   },
 ];

@@ -1,4 +1,3 @@
-import { state } from '@angular/animations';
 import { createReducer, on, Action } from '@ngrx/store';
 
 import * as CategoryActions from '../actions';

@@ -1,5 +1,6 @@
-import { createConstant } from '@app/root-store/utils';
 import { createAction, props } from '@ngrx/store';
+
+import { createConstant } from '@app/root-store/utils';
 
 const typesNames = ['SET_CATEGORY'] as const;
 

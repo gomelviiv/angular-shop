@@ -1,27 +1,30 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { categoryState } from '../state';
+import { CategoryState } from '../state';
 
 export const categorySelector =
-  createFeatureSelector<categoryState>('category');
+  createFeatureSelector<CategoryState>('category');
 
 export const brandSelector = createSelector(
   categorySelector,
-  (state) => state.brand
+  (state: CategoryState): number | undefined => state.brand
 );
 export const genderSelector = createSelector(
   categorySelector,
-  (state) => state.gender
+  (state: CategoryState): number | undefined => state.gender
 );
 export const seasonSelector = createSelector(
   categorySelector,
-  (state) => state.season
+  (state: CategoryState): number | undefined => state.season
 );
 export const eventSelector = createSelector(
   categorySelector,
-  (state) => state.event
+  (state: CategoryState): number | undefined => state.event
 );
 export const typesSelector = createSelector(
   categorySelector,
-  (state) => state.types
+  (state: CategoryState): number | undefined => state.types
 );
+
+export const selectValueSelector = (selectType: string) =>
+  createSelector(categorySelector, (state: any) => state[selectType]);
