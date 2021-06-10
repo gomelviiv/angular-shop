@@ -7,5 +7,8 @@ export const categorySelector =
 
 export const selectValueSelector = createSelector(
   categorySelector,
-  (state: any, props: string) => state[props]
+  (
+    state: CategoryState,
+    categoryType: keyof CategoryState
+  ): number | undefined => state[categoryType]
 );

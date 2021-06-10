@@ -14,7 +14,7 @@ import { CategoryState } from '@app/root-store/select-category/state';
 })
 export class FormSelectCategoryComponent implements OnInit {
   @Input() item: any;
-  event$!: Observable<CategoryState>;
+  event$!: Observable<number | undefined>;
   trackById = trackById;
 
   constructor(private store$: Store) {}
