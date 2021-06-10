@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 import { ButtonsMainPageCatalog, ItemsMainPage } from '@app/core/models';
 import { trackById } from '@app/core/utils';
-
+import { changeCategory } from '@app/root-store/select-category/actions';
 import { menuTile, menuButton } from './constant';
 
 @Component({
@@ -15,7 +16,11 @@ export class MainPageCatalogComponent implements OnInit {
   itemsMenuButtons: ButtonsMainPageCatalog[] = menuButton;
   trackById = trackById;
 
-  constructor() {}
+  constructor(private store$: Store) {}
+
+  changCategory(key: string, payload: number): void {
+    this.store$.dispatch(changeCategory({ key, payload }));
+  }
 
   ngOnInit(): void {}
 }
