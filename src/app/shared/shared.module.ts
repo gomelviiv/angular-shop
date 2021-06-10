@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material.module';
+import { FigureProductCardComponent } from './figure-product-card/figure-product-card.component';
 import { BasketItemComponent } from './basket-item/basket-item.component';
 import { FormSelectCategoryComponent } from './form-select-category/form-select-category.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,11 +15,13 @@ import { FigureComponent } from './figure/figure.component';
     FigureComponent,
     HeaderComponent,
     BasketItemComponent,
+    FigureProductCardComponent,
   ],
   imports: [CommonModule, MaterialModule, FormsModule],
   exports: [
     CommonModule,
     MaterialModule,
+    FigureProductCardComponent,
     FormsModule,
     FormSelectCategoryComponent,
     FigureComponent,

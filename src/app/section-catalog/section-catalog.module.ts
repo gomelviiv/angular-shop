@@ -2,11 +2,17 @@ import { NgModule } from '@angular/core';
 
 import { SectionCatalogRoutingModule } from './section-catalog-routing.module';
 import { SectionCatalogComponent } from './section-catalog.component';
-import { SelectCategoryComponent } from './select-category/select-category.component';
+import { ProductCardsComponent } from './product-cards/product-cards.component';
 import { SharedModule } from '@app/shared/shared.module';
 
+import { SelectCategoryComponent } from './select-category/select-category.component';
+
 @NgModule({
-  declarations: [SectionCatalogComponent, SelectCategoryComponent],
+  declarations: [
+    SectionCatalogComponent,
+    SelectCategoryComponent,
+    ProductCardsComponent,
+  ],
   imports: [SharedModule, SectionCatalogRoutingModule],
   exports: [SectionCatalogComponent],
 })
