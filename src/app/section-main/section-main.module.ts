@@ -3,25 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { SectionMainRoutingModule } from './section-main-routing.module';
 import { SectionMainComponent } from './section-main.component';
-import { MainInformationModule } from './main-information/main-information.module';
-import { MainPageCatalogModule } from './main-page-catalog/main-page-catalog.module';
 import { SharedModule } from '@app/shared/shared.module';
-import { OurSalonsModule } from './our-salons/our-salons.module';
-import { OurArticlesModule } from './our-articles/our-articles.module';
-import { OurSocialNetworksModule } from './our-social-networks/our-social-networks.module';
+import { MainInformationComponent } from './main-information/main-information.component';
+import { MainPageCatalogComponent } from './main-page-catalog/main-page-catalog.component';
+import { OurArticlesComponent } from './our-articles/our-articles.component';
+import { OurSalonsComponent } from './our-salons/our-salons.component';
+import { OurSocialNetworksComponent } from './our-social-networks/our-social-networks.component';
 
 @NgModule({
-  declarations: [SectionMainComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    SectionMainRoutingModule,
-    MainInformationModule,
-    MainPageCatalogModule,
-    OurSalonsModule,
-    OurArticlesModule,
-    OurSocialNetworksModule,
+  declarations: [
+    SectionMainComponent,
+    MainInformationComponent,
+    MainPageCatalogComponent,
+    OurArticlesComponent,
+    OurSalonsComponent,
+    OurSocialNetworksComponent,
   ],
-  exports: [SectionMainComponent],
+  imports: [CommonModule, SharedModule, SectionMainRoutingModule],
+  exports: [],
 })
 export class SectionMainModule {}

@@ -7,4 +7,6 @@ export interface ItemsMainPage {
 export interface ButtonsMainPageCatalog {
   id: number;
   text: string;
+  select: number;
+  type: string;
 }
