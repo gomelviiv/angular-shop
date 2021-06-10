@@ -35,32 +35,37 @@ export const menuButton = [
   {
     id: 1,
     text: 'свадьба',
-    // event: () => SetEvent(1),
+    type: 'event',
+    select: 0,
   },
   {
     id: 2,
-
     text: 'мужу',
-    // event: () => SetGender(1),
+    type: 'gender',
+    select: 1,
   },
   {
     id: 3,
     text: 'жене',
-    // event: () => SetGender(0),
+    type: 'gender',
+    select: 0,
   },
   {
     id: 4,
     text: 'партнеру',
-    // event: () => SetGender(2),
+    type: 'gender',
+    select: 2,
   },
   {
     id: 5,
     text: 'кольцо',
-    // event: () => SetType(0),
+    type: 'types',
+    select: 0,
   },
   {
     id: 6,
     text: 'лето',
-    // event: () => SetSeason(1),
+    type: 'season',
+    select: 1,
   },
 ];
