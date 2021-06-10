@@ -1,15 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 import { ButtonsMainPageCatalog, ItemsMainPage } from '@app/core/models';
 import { trackById } from '@app/core/utils';
 import { changeCategory } from '@app/root-store/select-category/actions';
-import {
-  brandSelector,
-  eventSelector,
-  genderSelector,
-} from '@app/root-store/select-category/selectors';
-import { Store } from '@ngrx/store';
-
 import { menuTile, menuButton } from './constant';
 
 @Component({

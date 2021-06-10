@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { changeCategory } from '@app/root-store/select-category/actions';
-
-import { selectValueSelector } from '@app/root-store/select-category/selectors';
+import { Observable } from 'rxjs';
 
 import { trackById } from '@core/utils';
 import { select, Store } from '@ngrx/store';
+import { CategoryStoreSelectors } from '@app/root-store/select-category';
+import { CategoryState } from '@app/root-store/select-category/state';
 
 @Component({
   selector: 'app-form-select-category',
@@ -13,10 +14,8 @@ import { select, Store } from '@ngrx/store';
 })
 export class FormSelectCategoryComponent implements OnInit {
   @Input() item: any;
-  event$: any;
+  event$!: Observable<CategoryState>;
   trackById = trackById;
-
-  q1$ = this.store$.pipe(select(selectValueSelector('event')));
 
   constructor(private store$: Store) {}
 
@@ -25,6 +24,8 @@ export class FormSelectCategoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.event$ = this.store$.pipe(select(selectValueSelector(this.item.type)));
+    this.event$ = this.store$.pipe(
+      select(CategoryStoreSelectors.selectValueSelector, this.item.type)
+    );
   }
 }

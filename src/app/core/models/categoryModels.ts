@@ -4,8 +4,8 @@ export interface CategoryItem {
 }
 
 export interface CategoryModel {
-  id: number | null;
-  name: string | null;
-  items: CategoryItem[] | null;
-  type?: string | null;
+  id?: number;
+  name?: string;
+  items?: CategoryItem[];
+  type?: string;
 }

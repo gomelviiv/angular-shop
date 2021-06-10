@@ -9,8 +9,8 @@ import { trackById } from '@app/core/utils';
   styleUrls: ['./figure.component.scss'],
 })
 export class FigureComponent implements OnInit {
-  @Input() items: Array<ItemsMainPage> | undefined;
-  @Input() itemsTile: Array<ItemsMainPage> | undefined;
+  @Input() items!: Array<ItemsMainPage>;
+  @Input() itemsTile!: Array<ItemsMainPage>;
   trackById = trackById;
 
   constructor() {}

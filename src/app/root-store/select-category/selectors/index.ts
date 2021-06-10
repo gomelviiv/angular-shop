@@ -5,26 +5,7 @@ import { CategoryState } from '../state';
 export const categorySelector =
   createFeatureSelector<CategoryState>('category');
 
-export const brandSelector = createSelector(
+export const selectValueSelector = createSelector(
   categorySelector,
-  (state: CategoryState): number | undefined => state.brand
+  (state: any, props: string) => state[props]
 );
-export const genderSelector = createSelector(
-  categorySelector,
-  (state: CategoryState): number | undefined => state.gender
-);
-export const seasonSelector = createSelector(
-  categorySelector,
-  (state: CategoryState): number | undefined => state.season
-);
-export const eventSelector = createSelector(
-  categorySelector,
-  (state: CategoryState): number | undefined => state.event
-);
-export const typesSelector = createSelector(
-  categorySelector,
-  (state: CategoryState): number | undefined => state.types
-);
-
-export const selectValueSelector = (selectType: string) =>
-  createSelector(categorySelector, (state: any) => state[selectType]);

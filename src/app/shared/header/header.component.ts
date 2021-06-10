@@ -3,7 +3,6 @@ import { HeaderMenuItems } from '@app/core/models';
 import { trackById } from '@app/core/utils';
 
 import { headerItems } from './constants';
-import { MatToolbar } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
