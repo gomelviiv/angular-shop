@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './material.module';
 import { FigureProductCardComponent } from './figure-product-card/figure-product-card.component';
@@ -17,7 +18,7 @@ import { FigureComponent } from './figure/figure.component';
     BasketItemComponent,
     FigureProductCardComponent,
   ],
-  imports: [CommonModule, MaterialModule, FormsModule],
+  imports: [CommonModule, MaterialModule, FormsModule, RouterModule],
   exports: [
     CommonModule,
     MaterialModule,

@@ -23,6 +23,13 @@ const routes: Routes = [
         (m) => m.SectionBasketModule
       ),
   },
+  {
+    path: 'product/:id',
+    loadChildren: () =>
+      import('./section-product/section-product.module').then(
+        (m) => m.SectionProductModule
+      ),
+  },
 ];
 
 @NgModule({
