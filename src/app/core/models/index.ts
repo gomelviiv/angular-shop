@@ -1,3 +1,3 @@
-export * from './categoryModels';
-export * from './itemsMainPageCatalogModels';
-export * from './headerModels';
+export * from './categoryModel';
+export * from './itemsMainPageCatalogModel';
+export * from './headerModel';

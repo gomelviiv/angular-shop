@@ -16,10 +16,10 @@ export class MainPageCatalogComponent implements OnInit {
   itemsMenuButtons: ButtonsMainPageCatalog[] = menuButton;
   trackById = trackById;
 
-  constructor(private store$: Store) {}
+  constructor(private _store$: Store) {}
 
   changCategory(key: string, payload: number): void {
-    this.store$.dispatch(changeCategory({ key, payload }));
+    this._store$.dispatch(changeCategory({ key, payload }));
   }
 
   ngOnInit(): void {}
