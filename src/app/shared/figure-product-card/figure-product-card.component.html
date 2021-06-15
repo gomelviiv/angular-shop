@@ -1,10 +1,12 @@
 <figure class="figure-product-card">
-  <img src="assets/images/sergi.png" alt="" />
+  <img src="assets/images/{{ item.img }}" alt="" />
   <figcaption class="product-card-figcaption">
-    <p class="product-card-figcaption__p">text</p>
-    <h2 class="product-card-figcaption__h2">name</h2>
-    <a [routerLink]="['/product', 3]">
-      <button class="product-card-figcaption__button">123123 ₽</button>
+    <p class="product-card-figcaption__p">{{ item.text }}</p>
+    <h2 class="product-card-figcaption__h2">{{ item.name }}</h2>
+    <a (click)="navigateToProductItem(item.id)">
+      <button class="product-card-figcaption__button">
+        {{ item.price }} ₽
+      </button>
     </a>
   </figcaption>
 </figure>

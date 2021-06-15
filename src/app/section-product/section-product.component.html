@@ -1,4 +1,4 @@
-<div class="product">
+<div class="product" *ngIf="item$ | async as productCard">
   <div class="wrapper">
     <div class="product-information">
       <div class="product-information__left">
@@ -13,10 +13,18 @@
       </div>
       <div class="product-information__right">
         <div class="right-information">
-          <h2 class="right-information__h2">item.name</h2>
+          <h2 class="right-information__h2">{{ productCard.name }}</h2>
           <div class="right-information__type">
-            <p>Категория: <label>item.type.text</label></p>
-            <p>Бренд: <label>item.brand.text</label></p>
+            <p>
+              Категория:
+              <label>{{ productCard.type ? productCard.type.text : "" }}</label>
+            </p>
+            <p>
+              Бренд:
+              <label>{{
+                productCard.brand ? productCard.brand.text : ""
+              }}</label>
+            </p>
           </div>
           <hr class="right-information__hr" />
           <p class="right-information__p">
@@ -31,7 +39,7 @@
             ornare velit. Ac imperdiet vitae, orci, nec scelerisque enim sit
             enim risus. Et nulla sit convallis orci est, fames sit luctus lacus.
           </p>
-          <h4 class="right-information__h4">item.price ₽</h4>
+          <h4 class="right-information__h4">{{ productCard.price }} ₽</h4>
           <div class="right-information__buttons">
             <button>купить</button>
             <button class="" value="">добавить в корзину</button>

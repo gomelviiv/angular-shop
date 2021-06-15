@@ -1,2 +1,9 @@
-<p>product-cards works!</p>
-<app-figure-product-card></app-figure-product-card>
+<div
+  class="product-cards"
+  *ngFor="let item of productCards; trackBy: trackById"
+>
+  <app-figure-product-card
+    [item]="item"
+    *ngIf="productCards"
+  ></app-figure-product-card>
+</div>
